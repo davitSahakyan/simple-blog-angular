@@ -1,0 +1,44 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="login-page-container">
+    <h1>Register</h1>
+    <div class="inputs-and-buttons-wrapper">
+      <div class="inputs-wrapper">
+
+        <mat-form-field>
+          <mat-label>firstname</mat-label>
+          <input formControlName="firstName" matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>lastname</mat-label>
+          <input formControlName="lastName" matInput>
+        </mat-form-field>
+
+        <div class="gender-container">
+          <mat-radio-group formControlName="gender" class="radiobuttons-container">
+            <mat-radio-button value="1"> male </mat-radio-button>
+            <mat-radio-button value="2"> famale </mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field>
+          <mat-label>username</mat-label>
+          <input formControlName="username" matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>email</mat-label>
+          <input formControlName="email" matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>password</mat-label>
+          <input formControlName="password" matInput>
+        </mat-form-field>
+      </div>
+      <div class="button-container">
+        <button mat-raised-button type="submit">Register</button>
+      </div>
+    </div>
+  </div>
+</form>

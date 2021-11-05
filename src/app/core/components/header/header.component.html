@@ -1,0 +1,13 @@
+<div class="background flex-between">
+  <div class="icon-container">
+    <img class="logo-img" src="../../../../assets/images/logo.png">
+  </div>
+  <div *ngIf="showLoginButton" class="header-right-part-container">
+    <span>Already a member?</span>
+    <button mat-raised-button color="primary" routerLink="/login">Login</button>
+  </div>
+  <div *ngIf="showRegisterButton" class="header-right-part-container">
+    <span>Not a member?</span>
+    <button mat-raised-button color="primary" routerLink="/registration">Register</button>
+  </div>
+</div>

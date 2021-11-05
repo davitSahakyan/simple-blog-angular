@@ -1,14 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
+import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/components/auth.module';
-import { AuthRoutingModule } from './auth/auth-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './core/components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AuthModule, AuthRoutingModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    AppRoutingModule,
+    MaterialModule,
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
